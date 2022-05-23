@@ -7,10 +7,10 @@ import "./MainContent.css";
 const MainContent = () => {
     return (
         <div className="content">
-            <Link to="transactions">
-                <ActionCard text={"Ожидающие транзакции"} />
+            <Link to="transactions" className="action-link add-transactions">
+                <ActionCard text={"Ожидающие транзакции"}  />
             </Link>
-            <Link to="blockchain">
+            <Link to="blockchain" className="action-link blockchain">
                 <ActionCard text={"Блокчейн"} />
             </Link>
         </div>
