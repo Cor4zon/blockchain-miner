@@ -3,16 +3,8 @@ import APIClient from "../../services/APIClient";
 import Transaction from "../Transaction/Transaction";
 import {Button} from "@mui/material";
 
-const TransactionsList = () => {
+const TransactionsList = ({ transactionsList }) => {
     const client = new APIClient();
-    const [ transactionsList, setTransactionsList ] = useState([]);
-
-    useEffect(() => {
-        client.fetchTransactions().then((result) => {
-            console.log(result.data.transactions);
-            setTransactionsList(result.data.transactions);
-        })
-    }, [])
 
     const transactions = (
         transactionsList.map((item, index) => {
